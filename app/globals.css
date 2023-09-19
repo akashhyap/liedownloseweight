@@ -70,6 +70,15 @@ html, body {
 .mb8 {
     @apply mb-8
 }
+.mxAuto {
+    @apply md:mx-auto
+}
+.mlAuto {
+    @apply lg:ml-auto
+}
+.ml0 {
+    @apply ml-0
+}
 .pL8 {
     @apply pl-8
 }
@@ -102,6 +111,9 @@ html, body {
 }
 .pY24 {
     @apply py-24;
+}
+.pY40 {
+    @apply py-40;
 }
 .pY50 {
     @apply py-[50px];

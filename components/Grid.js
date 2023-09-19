@@ -79,8 +79,8 @@ const Grid = ({ blok }) => {
   };
   return (
     <div
-      className={`grid_section ${
-        blok.display === "block" ? "block" : "mx-auto grid gap-2"
+      className={`grid_section w-full ${
+        blok.display === "block" ? "block" : "grid gap-2"
       } lg:gap-10 rounded-lg ${blok.reverse ? "grid_reverse" : ""} ${padY(
         blok.paddingY
       )} ${maxWidth(blok.maxWidth)} ${grid(blok.grid)} ${alignItems(

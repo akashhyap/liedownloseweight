@@ -55,6 +55,9 @@ const Section = ({ blok }) => {
       case "py-24":
         return "pY24";
         break;
+      case "py-40":
+        return "pY40";
+        break;
       case "py-50":
         return "pY50";
         break;
@@ -101,14 +104,35 @@ const Section = ({ blok }) => {
         break;
     }
   };
-
+  let alignItems = (val) => {
+    switch (blok.itemAlign) {
+      case "item-center":
+        return "itemCenter";
+        break;
+      case "item-end":
+        return "itemEnd";
+        break;
+      default:
+        return "itemStart";
+        break;
+    }
+  };
   const backgroundColor = {
     backgroundColor: blok.bgColor.color,
   };
 
   return (
-    <div className={`relative ${margin(blok.margin)} ${padY(blok.paddingY)} ${blok?.className}`} style={backgroundColor}>
-      <div className={`section_block ${maxWidth(blok.maxWidth)} ${blok.grid ? "grid gap-6 " + grid(blok.grid) : ""}`}>
+    <div
+      className={`relative ${margin(blok.margin)} ${padY(blok.paddingY)} ${
+        blok?.className
+      }`}
+      style={backgroundColor}
+    >
+      <div
+        className={`section_block ${maxWidth(blok.maxWidth)} ${
+          blok.grid ? "grid gap-6 " + grid(blok.grid) : ""
+        } ${alignItems(blok.itemAlign)}`}
+      >
         {blok?.body?.map((nestedBlok) => (
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
         ))}

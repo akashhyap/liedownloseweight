@@ -73,13 +73,35 @@ const TextBlock = ({ blok }) => {
     }
   };
 
-  const selectedTag = blok.title || 'h2';
+  let alignMargin = (val) => {
+    switch (blok.alignMargin) {
+      case "mx-auto":
+        return "mxAuto";
+        break;
+      case "ml-auto":
+        return "mlAuto";
+        break;
+      case "ml-0":
+        return "ml0";
+        break;
+      default:
+        return "mxAuto";
+        break;
+    }
+  };
+
+  const selectedTag = blok.title || "h2";
   return (
     <div
-      className={`z-10 relative leading-loose [&>h2]:text-4xl [&>h2]:my-5 [&>h3]:text-3xl [&>h3]:my-3 [&>h4]:text-xl [&>h4]:my-3 text_block ${paddingLeft(blok.paddingLeft)} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(blok.color)}`}
+      className={`z-10 relative leading-loose [&>h2]:text-4xl [&>h2]:my-5 [&>h3]:text-3xl [&>h3]:my-3 [&>h4]:text-xl [&>h4]:my-3 text_block ${paddingLeft(
+        blok.paddingLeft
+      )} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(
+        blok.color
+      )} ${alignMargin(blok.alignMargin)} ${blok?.width}`}
       {...storyblokEditable(blok)}
     >
-      {blok.titleLabel && React.createElement(selectedTag, null, blok.titleLabel)}
+      {blok.titleLabel &&
+        React.createElement(selectedTag, null, blok.titleLabel)}
       {render(blok.content)}
     </div>
   );

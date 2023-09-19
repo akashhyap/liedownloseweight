@@ -16,6 +16,7 @@ import Submenu from "./Submenu";
 import ImageBlock from "./ImageBlock";
 import Section from "./Section";
 import TextBlock from "./TextBlock";
+import Contact from "./Contact";
 
 /** 3. Initialize it as usual */
 storyblokInit({
@@ -35,6 +36,7 @@ storyblokInit({
     imageBlock: ImageBlock,
     section: Section,
     textBlock: TextBlock,
+    contact: Contact,
   },
 });
 
