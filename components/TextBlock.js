@@ -52,9 +52,48 @@ const TextBlock = ({ blok }) => {
         break;
     }
   };
-
+  let padY = (val) => {
+    switch (blok.paddingY) {
+      case "py-10":
+        return "pY10";
+        break;
+      case "py-16":
+        return "pY16";
+        break;
+      case "py-20":
+        return "pY20";
+        break;
+      case "py-24":
+        return "pY24";
+        break;
+      case "py-40":
+        return "pY40";
+        break;
+      case "py-50":
+        return "pY50";
+        break;
+      case "py-75":
+        return "pY75";
+        break;
+      default:
+        return "pY0";
+        break;
+    }
+  };
   let maxWidth = (val) => {
     switch (blok.maxWidth) {
+      case "max-w-xs":
+        return "maxWXs";
+        break;
+      case "max-w-sm":
+        return "maxWSm";
+        break;
+      case "max-w-2xl":
+        return "maxW2Xl";
+        break;
+      case "max-w-3xl":
+        return "maxW3Xl";
+        break;
       case "max-w-4xl":
         return "maxW4Xl";
         break;
@@ -93,11 +132,11 @@ const TextBlock = ({ blok }) => {
   const selectedTag = blok.title || "h2";
   return (
     <div
-      className={`z-10 relative leading-loose [&>h2]:text-4xl [&>h2]:my-5 [&>h3]:text-3xl [&>h3]:my-3 [&>h4]:text-xl [&>h4]:my-3 text_block ${paddingLeft(
+      className={`z-10 relative leading-loose [&>h1]:text-3xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-normal [&>h1]:font-bold [&>h1]:my-6 [&>h2]:text-4xl [&>h2]:my-5 [&>h3]:text-3xl [&>h3]:my-3 [&>h4]:text-xl [&>h4]:my-3 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
         blok.paddingLeft
       )} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(
         blok.color
-      )} ${alignMargin(blok.alignMargin)} ${blok?.width}`}
+      )} ${alignMargin(blok.alignMargin)} ${padY(blok.paddingY)} ${blok?.width} ${blok?.name}`}
       {...storyblokEditable(blok)}
     >
       {blok.titleLabel &&

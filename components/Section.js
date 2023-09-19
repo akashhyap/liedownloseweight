@@ -87,6 +87,18 @@ const Section = ({ blok }) => {
   };
   let maxWidth = (val) => {
     switch (blok.maxWidth) {
+      case "max-w-xs":
+        return "maxWXs";
+        break;
+      case "max-w-sm":
+        return "maxWSm";
+        break;
+      case "max-w-2xl":
+        return "maxW2Xl";
+        break;
+      case "max-w-3xl":
+        return "maxW3Xl";
+        break;
       case "max-w-4xl":
         return "maxW4Xl";
         break;

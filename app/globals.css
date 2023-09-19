@@ -124,6 +124,18 @@ html, body {
 .pY0 {
     @apply py-0;
 }
+.pB16 {
+    @apply pb-16;
+}
+.pT10 {
+    @apply pt-10;
+}
+.pT28 {
+    @apply pt-28;
+}
+.pT32 {
+    @apply pt-32;
+}
 .bgTransparent {
     @apply bg-transparent
 }
@@ -147,10 +159,16 @@ html, body {
     background-color: #d3d1c6;
 }
 .maxWXs {
-    @apply max-w-xs
+    @apply max-w-[90%] lg:max-w-xs
 }
 .maxWSm {
-    @apply max-w-sm
+    @apply max-w-[90%] lg:max-w-sm
+}
+.maxW2Xl {
+    @apply max-w-[90%] lg:max-w-2xl mx-auto
+}
+.maxW3Xl {
+    @apply max-w-[90%] lg:max-w-3xl mx-auto
 }
 .maxW4Xl {
     @apply max-w-[90%] lg:max-w-4xl mx-auto
@@ -236,4 +254,10 @@ html, body {
 }
 .footer .section_block .menulinks {
     @apply px-2
+}
+@media (max-width:767px) {
+    .mobile_order {
+          order: 1;
+          /* margin-top: 25px; */
+    }
 }
