@@ -6,6 +6,7 @@ import StoryblokProvider from "@/components/StoryblokProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL("https://liedownloseweight.vercel.app/"),
   title: "Liedownandloseweight",
   description: "Liedownandloseweight",
 };

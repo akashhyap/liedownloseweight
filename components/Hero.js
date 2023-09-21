@@ -1,4 +1,5 @@
 import { StoryblokComponent } from "@storyblok/react";
+import Image from "next/image";
 import React from "react";
 
 const Hero = ({ blok }) => {
@@ -30,10 +31,16 @@ const Hero = ({ blok }) => {
   };
   let minHeight = (val) => {
     switch (blok.minHeight) {
+      case "70vh":
+        return "minH70vh";
+        break;
+      case "75vh":
+        return "minH75vh";
+        break;
       case "min-h-450":
         return "minH450";
         break;
-       default:
+      default:
         return " ";
         break;
     }
@@ -77,24 +84,37 @@ const Hero = ({ blok }) => {
 
   return (
     <div
-      className={`relative maxW${blok.maxWidth.large}Xl overflow-hidden ${textAlign(blok.textAlign)} ${padY(blok.paddingY)} ${minHeight(blok.minHeight)}
-       ${blok.itemAlign ? "flex hero_flex": " "} ${alignItems(blok.itemAlign)}
-      `} style={backgroundColor}
+      className={`relative maxW${
+        blok.maxWidth.large
+      }Xl overflow-hidden ${textAlign(blok.textAlign)} ${padY(
+        blok.paddingY
+      )} ${minHeight(blok.minHeight)}
+       ${blok.itemAlign ? "flex hero_flex" : " "} ${alignItems(blok.itemAlign)} overflow-hidden
+      `}
+      style={backgroundColor}
     >
       {blok?.background_image?.filename && (
-        <img
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        // <img
+        //   className="absolute inset-0 -z-10 h-full w-full object-cover"
+        //   alt={blok?.background_image?.alt}
+        //   src={`${blok.background_image.filename}/m/`}
+        // />
+        <Image
           alt={blok?.background_image?.alt}
-          src={`${blok.background_image.filename}/m/`}
+          src={`${blok.background_image.filename}`}
+          fill
+          className="w-full h-full object-cover object-center"
         />
       )}
       {blok.body.map((nestedBlok) => {
         return <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />;
       })}
-      {blok?.overlay_color?.color && <div
-        className="absolute top-0 right-0 bottom-0 left-0"
-        style={overlayColor}
-      ></div>}
+      {blok?.overlay_color?.color && (
+        <div
+          className="absolute top-0 right-0 bottom-0 left-0"
+          style={overlayColor}
+        ></div>
+      )}
     </div>
   );
 };

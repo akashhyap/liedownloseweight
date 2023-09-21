@@ -159,10 +159,10 @@ html, body {
     background-color: #d3d1c6;
 }
 .maxWXs {
-    @apply max-w-[90%] lg:max-w-xs
+    @apply max-w-[90%] lg:max-w-xs mx-auto
 }
 .maxWSm {
-    @apply max-w-[90%] lg:max-w-sm
+    @apply max-w-[90%] lg:max-w-sm mx-auto
 }
 .maxW2Xl {
     @apply max-w-[90%] lg:max-w-2xl mx-auto
@@ -190,6 +190,12 @@ html, body {
 }
 .minH450{
     @apply min-h-[350px] lg:min-h-[450px]
+}
+.minH70vh {
+    min-height: 70vh;
+}
+.minH75vh {
+    min-height: 75vh;
 }
 .itemStart {
     @apply items-start
@@ -261,3 +267,7 @@ html, body {
           /* margin-top: 25px; */
     }
 }
+
+/* .hero_image {
+    object-position: 15% 0;
+} */
