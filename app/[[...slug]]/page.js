@@ -14,7 +14,7 @@ export default async function Page({ params }) {
     cv: Math.random(),
   });
   let { data: config } = await storyblokApi.get("cdn/stories/config");
-  // console.log("config=======>>>>>>>>", config?.story?.content);
+  // console.log("slug", params.slug);
   return (
     <div className="relative">
       <Config blok={config?.story?.content} />
