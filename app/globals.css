@@ -1,9 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html, body {
-    font-size: 17px;
+
+html,
+body {
+    font-size: 18px;
+    line-height: 36px;
 }
+
+@media screen and (max-width:767px) {
+    html {
+      overflow-x: hidden;
+    }
+}
+
+h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl mb-4 font-black
+}
+
+h2 {
+    @apply text-3xl xl:text-5xl xl:leading-snug mb-4 font-black
+}
+
 .g-cols-1 {
     @apply grid-cols-1
 }
@@ -267,7 +285,18 @@ html, body {
           /* margin-top: 25px; */
     }
 }
-
-/* .hero_image {
-    object-position: 15% 0;
-} */
+.font-400 {
+    @apply font-normal
+}
+.font-500 {
+    @apply font-medium
+}
+.font-600 {
+    @apply font-semibold
+}
+.font-700 {
+    @apply font-bold
+}
+.font-900 {
+    @apply font-black
+}

@@ -4,6 +4,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const TextBlock = ({ blok }) => {
   // console.log("text block", blok);
+
   let textColor = (val) => {
     switch (blok.color) {
       case "text-white":
@@ -129,18 +130,27 @@ const TextBlock = ({ blok }) => {
     }
   };
 
-  const selectedTag = blok.title || "h2";
+  const selectedTag = blok.selectHTag || "h2";
+
+  const classes = [blok?.titleFont, "mb-2"];
+
   return (
     <div
-      className={`z-10 relative leading-loose [&>h1]:text-3xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-normal [&>h1]:font-bold [&>h1]:my-6 [&>h2]:text-4xl [&>h2]:my-5 [&>h3]:text-3xl [&>h3]:my-3 [&>h4]:text-xl [&>h4]:my-3 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
+      className={`z-10 relative leading-loose [&>h1]:text-3xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-normal [&>h1]:font-bold [&>h1]:my-6 [&>h2]:text-4xl [&>h3]:text-2xl [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
         blok.paddingLeft
       )} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(
         blok.color
-      )} ${alignMargin(blok.alignMargin)} ${padY(blok.paddingY)} ${blok?.width} ${blok?.name}`}
+      )} ${alignMargin(blok.alignMargin)} ${padY(blok.paddingY)} ${
+        blok?.width
+      } ${blok?.name}`}
       {...storyblokEditable(blok)}
     >
       {blok.titleLabel &&
-        React.createElement(selectedTag, null, blok.titleLabel)}
+        React.createElement(
+          selectedTag,
+          { className: classes.join(" ") },
+          blok.titleLabel
+        )}
       {render(blok.content)}
     </div>
   );

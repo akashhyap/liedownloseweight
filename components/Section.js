@@ -142,7 +142,7 @@ const Section = ({ blok }) => {
     >
       <div
         className={`section_block ${maxWidth(blok.maxWidth)} ${
-          blok.grid ? "grid gap-6 " + grid(blok.grid) : ""
+          blok.grid ? "grid gap-10 " + grid(blok.grid) : ""
         } ${alignItems(blok.itemAlign)}`}
       >
         {blok?.body?.map((nestedBlok) => (

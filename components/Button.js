@@ -20,8 +20,12 @@ const Button = ({ blok }) => {
         break;
     }
   };
+  const addedStyles = {
+     marginTop: blok?.marginTop
+  }
+
   return (
-    <div className={`z-10 ${textAlign(blok.textAlign)}`}>
+    <div className={`z-10 ${textAlign(blok.textAlign)}`} style={addedStyles}>
       <Link href={blok.link.cached_url} className="primary-btn">{blok.label}</Link>
     </div>
   );

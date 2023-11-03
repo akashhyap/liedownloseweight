@@ -91,9 +91,14 @@ const ImageBlock = ({ blok }) => {
         break;
     }
   };
+
+  const addedStyle = {
+    marginBottom: blok?.marginBottom,
+  }
   return (
     <div
       className={`relative ${margin(blok.marginY)} ${padY(blok.paddingY)} ${maxWidth(blok.maxWidth)} ${blok?.margin} image_block`}
+      style={addedStyle}
     >
       {blok?.image?.filename && (
         <Image
