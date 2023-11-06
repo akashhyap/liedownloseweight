@@ -94,6 +94,12 @@ h2 {
 .mlAuto {
     @apply lg:ml-auto
 }
+.imageCenter {
+    @apply mx-auto
+}
+.imageRight {
+    @apply ml-auto
+}
 .ml0 {
     @apply ml-0
 }

@@ -69,6 +69,25 @@ const Section = ({ blok }) => {
         break;
     }
   };
+  let paddingLeft = (val) => {
+    switch (blok.paddingLeft) {
+      case "pl-8":
+        return "pL8";
+        break;
+      case "pl-16":
+        return "pL16";
+        break;
+      case "pl-20":
+        return "pL20";
+        break;
+      case "pl-64":
+        return "pL64";
+        break;
+      default:
+        return " ";
+        break;
+    }
+  };
   let grid = (val) => {
     switch (blok.grid) {
       case "grid-cols-2":
@@ -135,10 +154,11 @@ const Section = ({ blok }) => {
 
   return (
     <div
-      className={`relative ${margin(blok.margin)} ${padY(blok.paddingY)} ${
-        blok?.className
-      }`}
+      className={`relative w-full ${margin(blok.margin)} ${padY(
+        blok.paddingY
+      )} ${blok?.className} ${paddingLeft(blok.paddingLeft)}`}
       style={backgroundColor}
+      {...storyblokEditable(blok)}
     >
       <div
         className={`section_block ${maxWidth(blok.maxWidth)} ${

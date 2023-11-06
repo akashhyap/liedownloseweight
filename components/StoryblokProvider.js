@@ -17,6 +17,8 @@ import ImageBlock from "./ImageBlock";
 import Section from "./Section";
 import TextBlock from "./TextBlock";
 import Contact from "./Contact";
+import CarouselWrapper from "./CarouselWrapper";
+import Carousel from "./Carousel";
 
 /** 3. Initialize it as usual */
 storyblokInit({
@@ -37,6 +39,8 @@ storyblokInit({
     section: Section,
     textBlock: TextBlock,
     contact: Contact,
+    carouselWrapper: CarouselWrapper,
+    carousel: Carousel,
   },
 });
 

@@ -1,4 +1,4 @@
-import { StoryblokComponent } from "@storyblok/react";
+import { StoryblokComponent, storyblokEditable } from "@storyblok/react";
 import Image from "next/image";
 import React from "react";
 
@@ -84,12 +84,15 @@ const Hero = ({ blok }) => {
 
   return (
     <div
+      {...storyblokEditable(blok)}
       className={`relative maxW${
         blok.maxWidth.large
       }Xl overflow-hidden ${textAlign(blok.textAlign)} ${padY(
         blok.paddingY
       )} ${minHeight(blok.minHeight)}
-       ${blok.itemAlign ? "flex hero_flex" : " "} ${alignItems(blok.itemAlign)} overflow-hidden
+       ${blok.itemAlign ? "flex hero_flex" : " "} ${alignItems(
+        blok.itemAlign
+      )} overflow-hidden
       `}
       style={backgroundColor}
     >
