@@ -259,7 +259,7 @@ h2 {
     @apply bg-gray-100
 }
 .primary-btn {
-    @apply p-3 rounded-md bg-black text-white hover:bg-gray-950 inline-block
+    @apply p-3 rounded-md bg-black text-white hover:bg-gray-800 inline-block
 }
 .grid_reverse .image_block {
    @apply lg:order-2

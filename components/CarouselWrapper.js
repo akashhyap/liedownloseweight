@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 const CarouselWrapper = ({ blok }) => {
-//   console.log(blok);  
+  console.log(blok?.body.length);  
   const [curr, setCurr] = useState(0);
   
   const prev = () => setCurr((cur) => (cur === 0 ? blok?.body.length - 1 : cur - 1))
