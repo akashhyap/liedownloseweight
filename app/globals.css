@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl mb-4 font-black
+    @apply text-4xl md:text-5xl lg:text-6xl leading-4 mb-4 font-black
 }
 
 h2 {
@@ -29,7 +29,7 @@ h2 {
     @apply grid-cols-1 md:grid-cols-2
 }
 .g-cols-3 {
-    @apply grid-cols-1 md:grid-cols-3
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3
 }
 .g-cols-4 {
     @apply grid-cols-1 md:grid-cols-3 lg:grid-cols-4

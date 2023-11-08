@@ -149,21 +149,21 @@ const Section = ({ blok }) => {
     }
   };
   const backgroundColor = {
-    backgroundColor: blok.bgColor.color,
+    backgroundColor: blok?.bgColor?.color,
   };
 
   return (
     <div
-      className={`relative w-full ${margin(blok.margin)} ${padY(
-        blok.paddingY
-      )} ${blok?.className} ${paddingLeft(blok.paddingLeft)}`}
+      className={`relative w-full ${margin(blok?.margin)} ${padY(
+        blok?.paddingY
+      )} ${blok?.className} ${paddingLeft(blok?.paddingLeft)}`}
       style={backgroundColor}
       {...storyblokEditable(blok)}
     >
       <div
-        className={`section_block ${maxWidth(blok.maxWidth)} ${
-          blok.grid ? "grid gap-10 " + grid(blok.grid) : ""
-        } ${alignItems(blok.itemAlign)}`}
+        className={`section_block ${maxWidth(blok?.maxWidth)} ${
+          blok?.grid ? "grid gap-10 " + grid(blok?.grid) : ""
+        } ${alignItems(blok?.itemAlign)}`}
       >
         {blok?.body?.map((nestedBlok) => (
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />

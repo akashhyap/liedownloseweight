@@ -19,6 +19,11 @@ import TextBlock from "./TextBlock";
 import Contact from "./Contact";
 import CarouselWrapper from "./CarouselWrapper";
 import Carousel from "./Carousel";
+import OfferComparison from "./OfferComparison";
+import OfferContent from "./OfferContent";
+import BookNow from "./BookNow";
+import Faq from "./Faq";
+import FaqContent from "./FaqContent";
 
 /** 3. Initialize it as usual */
 storyblokInit({
@@ -41,6 +46,11 @@ storyblokInit({
     contact: Contact,
     carouselWrapper: CarouselWrapper,
     carousel: Carousel,
+    offerComparison: OfferComparison,
+    offerContent: OfferContent,
+    bookNow: BookNow,
+    faq: Faq,
+    faqContent: FaqContent,
   },
 });
 

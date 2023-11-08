@@ -2,7 +2,7 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react/rsc";
 
 const Page = ({ blok }) => {
   let maxWidth = (val) => {
-    switch (blok.maxWidth) {
+    switch (blok?.maxWidth) {
       case "max-w-4xl":
         return "maxW4Xl";
         break;
@@ -15,8 +15,8 @@ const Page = ({ blok }) => {
     }
   };
   return (
-    <div className={`${maxWidth(blok.maxWidth)}`} {...storyblokEditable(blok)}>
-      {blok.body.map((nestedBlok) => (
+    <div className={`${maxWidth(blok?.maxWidth)}`} {...storyblokEditable(blok)}>
+      {blok?.body?.map((nestedBlok) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
     </div>

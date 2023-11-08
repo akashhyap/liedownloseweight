@@ -9,7 +9,7 @@ const Config = ({ blok }) => {
   // console.log("config file", blok);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="absolute top-0 left-0 w-full z-20 py-2">
+    <div className="w-full z-20">
       <div className="max-w-[93%] mx-auto">
         <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -20,8 +20,8 @@ const Config = ({ blok }) => {
                   src={blok?.logo?.filename}
                   alt="TrustSEO"
                   className="h-full object-cover"
-                  width={170}
-                  height={60}
+                  width={150}
+                  height={40}
                 />
               )}
             </Link>

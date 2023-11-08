@@ -1,3 +1,4 @@
+import { storyblokEditable } from "@storyblok/react";
 import Image from "next/image";
 import React from "react";
 
@@ -99,6 +100,7 @@ const ImageBlock = ({ blok }) => {
     <div
       className={`relative ${margin(blok.marginY)} ${padY(blok.paddingY)} ${maxWidth(blok.maxWidth)} ${blok?.margin} image_block`}
       style={addedStyle}
+      {...storyblokEditable(blok)}
     >
       {blok?.image?.filename && (
         <Image

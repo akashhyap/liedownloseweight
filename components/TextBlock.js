@@ -136,7 +136,7 @@ const TextBlock = ({ blok }) => {
 
   return (
     <div
-      className={`z-10 relative leading-loose [&>h1]:text-3xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-normal [&>h1]:font-bold [&>h1]:my-6 [&>h2]:text-4xl [&>h3]:text-2xl [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
+      className={`z-10 relative leading-loose [&>h1]:my-6 [&>h2]:text-4xl [&>h3]:text-2xl [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
         blok.paddingLeft
       )} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(
         blok.color
@@ -148,7 +148,12 @@ const TextBlock = ({ blok }) => {
       {blok.titleLabel &&
         React.createElement(
           selectedTag,
-          { className: classes.join(" ") },
+          {
+            className: classes.join(" "),
+            style: {
+              color: blok?.color?.color,
+            },
+          },
           blok.titleLabel
         )}
       {render(blok.content)}

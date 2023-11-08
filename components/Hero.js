@@ -74,13 +74,16 @@ const Hero = ({ blok }) => {
         break;
     }
   };
-  const backgroundColor = {
-    backgroundColor: blok.background_color.color,
+  const addedClasses = {
+    backgroundColor: blok?.background_color?.color,
+    marginTop: blok?.marginTop,
+    marginBottom: blok?.marginBottom,
   };
   const overlayColor = {
     backgroundColor: blok?.overlay_color?.color,
     opacity: blok?.opacity,
   };
+
 
   return (
     <div
@@ -94,7 +97,7 @@ const Hero = ({ blok }) => {
         blok.itemAlign
       )} overflow-hidden
       `}
-      style={backgroundColor}
+      style={addedClasses}
     >
       {blok?.background_image?.filename && (
         // <img
