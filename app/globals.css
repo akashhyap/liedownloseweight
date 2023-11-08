@@ -183,31 +183,31 @@ h2 {
     background-color: #d3d1c6;
 }
 .maxWXs {
-    @apply max-w-[90%] lg:max-w-xs mx-auto
+    @apply max-w-[90%] xl:max-w-xs mx-auto
 }
 .maxWSm {
-    @apply max-w-[90%] lg:max-w-sm mx-auto
+    @apply max-w-[90%] xl:max-w-sm mx-auto
 }
 .maxW2Xl {
-    @apply max-w-[90%] lg:max-w-2xl mx-auto
+    @apply max-w-[90%] xl:max-w-2xl mx-auto
 }
 .maxW3Xl {
-    @apply max-w-[90%] lg:max-w-3xl mx-auto
+    @apply max-w-[90%] xl:max-w-3xl mx-auto
 }
 .maxW4Xl {
-    @apply max-w-[90%] lg:max-w-4xl mx-auto
+    @apply max-w-[90%] xl:max-w-4xl mx-auto
 }
 .maxW5Xl {
-    @apply max-w-[90%] lg:max-w-5xl mx-auto
+    @apply max-w-[90%] xl:max-w-5xl mx-auto
 }
 .maxW6Xl {
-    @apply max-w-[90%] lg:max-w-6xl mx-auto
+    @apply max-w-[90%] xl:max-w-6xl mx-auto
 }
 .maxW7Xl {
-    @apply max-w-[90%] lg:max-w-7xl mx-auto
+    @apply max-w-[90%] xl:max-w-7xl mx-auto
 }
 .maxW12Xl {
-    @apply max-w-[90%] lg:max-w-full mx-auto
+    @apply max-w-[90%] xl:max-w-full mx-auto
 }
 .maxWNone {
     @apply max-w-none
@@ -229,6 +229,12 @@ h2 {
 }
 .itemEnd {
     @apply items-end
+}
+.justifyCenter {
+    @apply justify-center
+}
+.justifyEnd {
+    @apply justify-end
 }
 .textLeft {
     @apply text-left

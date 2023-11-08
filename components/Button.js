@@ -25,7 +25,7 @@ const Button = ({ blok }) => {
   }
 
   return (
-    <div className={`relative z-20 ${textAlign(blok.textAlign)}`} style={addedStyles}>
+    <div className={`relative z-20 pb-8 xl:pb-0 ${textAlign(blok.textAlign)}`} style={addedStyles}>
       <Link href={blok.link.cached_url} className="primary-btn">{blok.label}</Link>
     </div>
   );

@@ -98,15 +98,15 @@ const ImageBlock = ({ blok }) => {
   }
   return (
     <div
-      className={`relative ${margin(blok.marginY)} ${padY(blok.paddingY)} ${maxWidth(blok.maxWidth)} ${blok?.margin} image_block`}
+      className={`relative flex ${blok?.align} ${margin(blok?.marginY)} ${padY(blok?.paddingY)} ${maxWidth(blok?.maxWidth)} ${blok?.margin} image_block`}
       style={addedStyle}
       {...storyblokEditable(blok)}
     >
       {blok?.image?.filename && (
         <Image
           alt=""
-          src={`${blok.image.filename}`}
-          className={`w-full rounded-lg ${imageStyles(blok.imageSize)}`}
+          src={`${blok?.image.filename}`}
+          className={`max-w-full rounded-lg ${imageStyles(blok?.imageSize)}`}
           width={500}
           height={500}
         />
