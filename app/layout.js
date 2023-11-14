@@ -4,15 +4,18 @@ import { Roboto } from "next/font/google";
 import StoryblokProvider from "@/components/StoryblokProvider";
 
 const roboto = Roboto({
-  weight: ['400', '500', '700', '900'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+  weight: ["400", "500", "700", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
-  metadataBase: new URL("https://liedownloseweight.vercel.app/"),
+  metadataBase: new URL("https://liedownloseweightrs.co.uk/"),
   title: "Liedownandloseweight",
   description: "Liedownandloseweight",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 storyblokInit({
@@ -28,9 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <StoryblokProvider>
       <html lang="en">
-        <body className={roboto.className}>
-          {children}
-        </body>
+        <body className={roboto.className}>{children}</body>
       </html>
     </StoryblokProvider>
   );
