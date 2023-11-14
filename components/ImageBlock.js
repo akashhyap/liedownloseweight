@@ -107,8 +107,8 @@ const ImageBlock = ({ blok }) => {
           alt=""
           src={`${blok?.image.filename}`}
           className={`max-w-full rounded-lg ${imageStyles(blok?.imageSize)}`}
-          width={500}
-          height={500}
+          width={800}
+          height={800}
         />
       )}
     </div>

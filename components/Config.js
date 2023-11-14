@@ -4,12 +4,16 @@ import Link from "next/link";
 import { StoryblokComponent } from "@storyblok/react";
 import { Transition } from "@headlessui/react";
 import CustomStoryblokComponent from "./StoryblokMenuComponent";
+import { usePathname } from "next/navigation";
 
 const Config = ({ blok }) => {
   // console.log("config file", blok);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathName = usePathname();
+  const isHomePage = pathName === "/";
+
   return (
-    <div className="w-full z-20">
+    <div className={`w-full z-20 ${isHomePage ? 'absolute left-0 top-0' : ''}`}>
       <div className="max-w-[93%] mx-auto">
         <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -95,7 +99,7 @@ const Config = ({ blok }) => {
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
                 <Link href="/">
-                  <span className="sr-only">Vaporizers</span>
+                  <span className="sr-only">Lie down lose weight</span>
                   {blok?.logo && (
                     <img
                       src={blok?.logo?.filename}

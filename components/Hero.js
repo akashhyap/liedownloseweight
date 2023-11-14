@@ -40,6 +40,9 @@ const Hero = ({ blok }) => {
       case "min-h-450":
         return "minH450";
         break;
+      case "min-h-screen":
+        return "minHScreen";
+        break;
       default:
         return " ";
         break;
