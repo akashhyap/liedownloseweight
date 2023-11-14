@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 const ImageBlock = ({ blok }) => {
-  // console.log("image", blok);
+  // console.log("image", blok.priority);
   let imageStyles = (val) => {
     switch (blok.imageSize) {
       case "full-cover":
@@ -95,10 +95,12 @@ const ImageBlock = ({ blok }) => {
 
   const addedStyle = {
     marginBottom: blok?.marginBottom,
-  }
+  };
   return (
     <div
-      className={`relative flex ${blok?.align} ${margin(blok?.marginY)} ${padY(blok?.paddingY)} ${maxWidth(blok?.maxWidth)} ${blok?.margin} image_block`}
+      className={`relative flex ${blok?.align} ${margin(blok?.marginY)} ${padY(
+        blok?.paddingY
+      )} ${maxWidth(blok?.maxWidth)} ${blok?.margin} image_block`}
       style={addedStyle}
       {...storyblokEditable(blok)}
     >
@@ -107,8 +109,9 @@ const ImageBlock = ({ blok }) => {
           alt=""
           src={`${blok?.image.filename}`}
           className={`max-w-full rounded-lg ${imageStyles(blok?.imageSize)}`}
-          width={800}
-          height={800}
+          width={600}
+          height={600}
+          {...(blok.priority ? { priority: true } : {})}
         />
       )}
     </div>
