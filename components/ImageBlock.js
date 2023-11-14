@@ -111,6 +111,7 @@ const ImageBlock = ({ blok }) => {
           className={`max-w-full rounded-lg ${imageStyles(blok?.imageSize)}`}
           width={600}
           height={600}
+          sizes="(min-width: 808px) 50vw, 100vw"
           {...(blok.priority ? { priority: true } : {})}
         />
       )}

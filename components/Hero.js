@@ -111,6 +111,7 @@ const Hero = ({ blok }) => {
           src={`${blok.background_image.filename}`}
           fill
           className="w-full h-full object-cover object-center"
+          {...(blok.priority ? { priority: true } : {})}
         />
       )}
       {blok.body.map((nestedBlok) => {
