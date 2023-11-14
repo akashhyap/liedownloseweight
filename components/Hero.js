@@ -91,9 +91,7 @@ const Hero = ({ blok }) => {
   return (
     <div
       {...storyblokEditable(blok)}
-      className={`relative maxW${
-        blok.maxWidth.large
-      }Xl overflow-hidden ${textAlign(blok.textAlign)} ${padY(
+      className={`relative overflow-hidden ${textAlign(blok.textAlign)} ${padY(
         blok.paddingY
       )} ${minHeight(blok.minHeight)}
        ${blok.itemAlign ? "flex hero_flex" : " "} ${alignItems(

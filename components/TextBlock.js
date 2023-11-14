@@ -89,6 +89,9 @@ const TextBlock = ({ blok }) => {
       case "max-w-sm":
         return "maxWSm";
         break;
+      case "max-w-xl":
+        return "maxWXl";
+        break;
       case "max-w-2xl":
         return "maxW2Xl";
         break;
@@ -134,18 +137,23 @@ const TextBlock = ({ blok }) => {
 
   const classes = [blok?.titleFont, "mb-2"];
 
+  const addedClass = {
+    color: blok?.color?.color,
+  };
+
   return (
     <div
-      className={`z-10 relative leading-loose [&>h1]:my-6 [&>h2]:text-4xl [&>h3]:text-2xl [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
+      className={`z-10 relative leading-loose [&>h1]:my-6 [&>h2]:my-6 [&>h2]:text-4xl [&>h3]:my-6 [&>h4]:my-6 [&>h3]:text-2xl [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
         blok.paddingLeft
       )} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(
         blok.color
       )} ${alignMargin(blok.alignMargin)} ${padY(blok.paddingY)} ${
         blok?.width
       } ${blok?.name}`}
+      style={addedClass}
       {...storyblokEditable(blok)}
     >
-      {blok.titleLabel &&
+      {blok?.titleLabel &&
         React.createElement(
           selectedTag,
           {
@@ -156,7 +164,7 @@ const TextBlock = ({ blok }) => {
           },
           blok.titleLabel
         )}
-      {render(blok.content)}
+      {render(blok?.content)}
     </div>
   );
 };

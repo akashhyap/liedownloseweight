@@ -112,6 +112,9 @@ const Section = ({ blok }) => {
       case "max-w-sm":
         return "maxWSm";
         break;
+      case "max-w-xl":
+        return "maxWXl";
+        break;
       case "max-w-2xl":
         return "maxW2Xl";
         break;

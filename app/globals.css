@@ -188,6 +188,9 @@ h2 {
 .maxWSm {
     @apply max-w-[90%] xl:max-w-sm mx-auto
 }
+.maxWXl {
+    @apply max-w-[90%] xl:max-w-xl mx-auto
+}
 .maxW2Xl {
     @apply max-w-[90%] xl:max-w-2xl mx-auto
 }
