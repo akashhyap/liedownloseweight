@@ -143,7 +143,7 @@ const TextBlock = ({ blok }) => {
 
   return (
     <div
-      className={`z-10 relative leading-loose [&>h1]:my-6 [&>h2]:my-6 [&>h2]:text-4xl [&>h3]:my-6 [&>h4]:my-6 [&>h3]:text-2xl [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
+      className={`z-10 relative [&>p]:leading-loose [&>h1]:my-6 [&>h2]:leading-tight [&>h3]:my-6 [&>h4]:my-6 [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
         blok.paddingLeft
       )} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(
         blok.color
