@@ -37,6 +37,12 @@ const Hero = ({ blok }) => {
       case "75vh":
         return "minH75vh";
         break;
+      case "80vh":
+        return "minH80vh";
+        break;
+      case "85vh":
+        return "minH85vh";
+        break;
       case "min-h-450":
         return "minH450";
         break;
@@ -91,7 +97,7 @@ const Hero = ({ blok }) => {
   return (
     <div
       {...storyblokEditable(blok)}
-      className={`relative overflow-hidden ${textAlign(blok.textAlign)} ${padY(
+      className={`hero_wrapper relative overflow-hidden ${textAlign(blok.textAlign)} ${padY(
         blok.paddingY
       )} ${minHeight(blok.minHeight)}
        ${blok.itemAlign ? "flex hero_flex" : " "} ${alignItems(

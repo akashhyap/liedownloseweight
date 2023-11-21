@@ -14,7 +14,7 @@ export const metadata = {
   title: "Liedownandloseweight",
   description: "Liedownandloseweight",
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://liedownloseweightrs.co.uk/favicon.ico",
   },
 };
 
