@@ -308,7 +308,7 @@ h3 {
     @apply p-3 rounded-md bg-black text-white hover:bg-gray-800 inline-block
 }
 .grid_reverse .image_block {
-   @apply lg:order-2
+   @apply md:order-2
 }
 .highlighter .text_block h3{
     @apply text-2xl lg:-ml-20 bg-white lg:p-2
