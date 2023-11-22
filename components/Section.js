@@ -2,7 +2,7 @@ import { StoryblokComponent, storyblokEditable } from "@storyblok/react";
 import React from "react";
 
 const Section = ({ blok }) => {
-  // console.log("Section", blok);
+  // console.log("Section", blok.paddingTop);
   let margin = (val) => {
     switch (blok.margin) {
       case "my-5":
@@ -66,6 +66,28 @@ const Section = ({ blok }) => {
         break;
       default:
         return "pY0";
+        break;
+    }
+  };
+  let padTop = (val) => {
+    switch (blok.paddingTop) {
+      case "pt-10":
+        return "pT10";
+        break;
+      case "pt-20":
+        return "pT20";
+        break;
+      case "pt-24":
+        return "pT24";
+        break;
+      case "pt-28":
+        return "pT28";
+        break;
+      case "pt-32":
+        return "pT32";
+        break;
+      default:
+        return " ";
         break;
     }
   };
@@ -159,7 +181,9 @@ const Section = ({ blok }) => {
     <div
       className={`relative w-full ${margin(blok?.margin)} ${padY(
         blok?.paddingY
-      )} ${blok?.className} ${paddingLeft(blok?.paddingLeft)}`}
+      )} ${padTop(blok?.paddingTop)} ${
+        blok?.className && blok?.className
+      } ${paddingLeft(blok?.paddingLeft)}`}
       style={backgroundColor}
       {...storyblokEditable(blok)}
     >

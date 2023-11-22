@@ -156,13 +156,19 @@ h3 {
     @apply pb-16;
 }
 .pT10 {
-    @apply pt-10;
+    @apply xl:pt-10;
+}
+.pT20 {
+    @apply xl:pt-20;
+}
+.pT24 {
+    @apply xl:pt-24;
 }
 .pT28 {
-    @apply pt-28;
+    @apply xl:pt-28;
 }
 .pT32 {
-    @apply pt-32;
+    @apply xl:pt-32;
 }
 .bgTransparent {
     @apply bg-transparent

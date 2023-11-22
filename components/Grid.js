@@ -100,6 +100,12 @@ const Grid = ({ blok }) => {
       case "pt-10":
         return "pT10";
         break;
+      case "pt-20":
+        return "pT20";
+        break;
+      case "pt-24":
+        return "pT24";
+        break;
       case "pt-28":
         return "pT28";
         break;
@@ -125,7 +131,7 @@ const Grid = ({ blok }) => {
     <div
       className={`grid_section w-full ${
         blok?.display === "block" ? "block" : "grid gap-2"
-      } lg:gap-10 rounded-lg ${blok?.reverse ? "grid_reverse" : ""} ${padY(
+      } gap-6 lg:gap-10 rounded-lg ${blok?.reverse ? "grid_reverse" : ""} ${padY(
         blok?.paddingY
       )} ${padTop(blok?.paddingTop)} ${padBottom(blok?.paddingBottom)} ${maxWidth(blok?.maxWidth)} ${grid(blok?.grid)} ${alignItems(
         blok?.itemAlign

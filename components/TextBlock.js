@@ -81,6 +81,28 @@ const TextBlock = ({ blok }) => {
         break;
     }
   };
+  let padTop = (val) => {
+    switch (blok.paddingTop) {
+      case "pt-10":
+        return "pT10";
+        break;
+      case "pt-20":
+        return "pT20";
+        break;
+      case "pt-24":
+        return "pT24";
+        break;
+      case "pt-28":
+        return "pT28";
+        break;
+      case "pt-32":
+        return "pT32";
+        break;
+      default:
+        return " ";
+        break;
+    }
+  };
   let maxWidth = (val) => {
     switch (blok.maxWidth) {
       case "max-w-xs":
@@ -133,7 +155,7 @@ const TextBlock = ({ blok }) => {
     }
   };
 
-  const selectedTag = blok.selectHTag || "h2";
+  const selectedTag = blok?.selectHTag || "h2";
 
   const classes = [blok?.titleFont, "mb-2"];
 
@@ -143,11 +165,11 @@ const TextBlock = ({ blok }) => {
 
   return (
     <div
-      className={`z-10 relative [&>p]:leading-loose [&>h1]:my-6 [&>h2]:leading-tight [&>h3]:my-6 [&>h4]:my-6 [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 text_block ${paddingLeft(
-        blok.paddingLeft
-      )} ${textAlign(blok.textAlign)} ${maxWidth(blok.maxWidth)} ${textColor(
-        blok.color
-      )} ${alignMargin(blok.alignMargin)} ${padY(blok.paddingY)} ${
+      className={`z-10 relative [&>p]:leading-loose [&>h1]:my-6 [&>h2]:leading-tight [&>h3]:my-6 [&>h4]:my-6 [&>h4]:text-xl [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-5 [&>ul]:mb-8 [&>ul]:list-disc [&>ul]:pl-4 [&>ul>li]:leading-8 text_block ${paddingLeft(
+        blok?.paddingLeft
+      )} ${textAlign(blok.textAlign)} ${maxWidth(blok?.maxWidth)} ${textColor(
+        blok?.color
+      )} ${alignMargin(blok?.alignMargin)} ${padY(blok?.paddingY)} ${padTop(blok?.paddingTop)} ${
         blok?.width
       } ${blok?.name}`}
       style={addedClass}
